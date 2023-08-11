@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="333.0" prefWidth="333.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginController">
+   <children>
+      <Button fx:id="loginbtn" layoutX="31.0" layoutY="182.0" mnemonicParsing="false" onAction="#openaptscheduler" text="Login" />
+      <Button fx:id="resetbtn" layoutX="118.0" layoutY="182.0" mnemonicParsing="false" onAction="#cleartext" text="Reset" />
+      <Button fx:id="exitbtn" layoutX="264.0" layoutY="257.0" mnemonicParsing="false" onAction="#closeapp" text="Exit" />
+      <PasswordField fx:id="passwordtxt" layoutX="128.0" layoutY="123.0" />
+      <TextField fx:id="usernametxt" layoutX="128.0" layoutY="81.0" />
+      <Label fx:id="usernameLbl" layoutX="15.0" layoutY="85.0" text="Username" />
+      <Label fx:id="passwordLbl" layoutX="17.0" layoutY="127.0" text="Password" />
+      <Label fx:id="amsLbl" layoutX="14.0" layoutY="21.0" text="Appointment Management System">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="timezonelbl" layoutX="14.0" layoutY="261.0" text="Time Zone" />
+      <Label fx:id="updatelbl" layoutX="100.0" layoutY="261.0" text="Label" />
+   </children>
+</Pane>

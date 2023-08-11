@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="458.0" prefWidth="472.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AddAptController">
+   <children>
+      <Label layoutX="17.0" layoutY="63.0" text="Apt ID" />
+      <Label layoutX="22.0" layoutY="98.0" text="Title" />
+      <Label layoutX="10.0" layoutY="135.0" text="Description" />
+      <Label layoutX="10.0" layoutY="171.0" text="Location" />
+      <Label layoutX="20.0" layoutY="205.0" text="Type" />
+      <Label layoutX="12.0" layoutY="240.0" text="Contact " />
+      <Label layoutX="7.0" layoutY="274.0" text="Customer ID" />
+      <Label layoutX="14.0" layoutY="344.0" text="Start Date" />
+      <Label layoutX="219.0" layoutY="345.0" text="End Date" />
+      <Label layoutX="13.0" layoutY="382.0" text="Start Time" />
+      <Label layoutX="218.0" layoutY="382.0" text="End Time" />
+      <Label layoutX="21.0" layoutY="310.0" text="User ID" />
+      <Label layoutX="10.0" layoutY="14.0" text="Add Appointment">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="aptIdTxt" disable="true" layoutX="87.0" layoutY="59.0" prefHeight="17.0" prefWidth="154.0" />
+      <TextField fx:id="titleTxt" layoutX="84.0" layoutY="94.0" />
+      <TextField fx:id="descTxt" layoutX="84.0" layoutY="131.0" />
+      <TextField fx:id="locTxt" layoutX="84.0" layoutY="167.0" />
+      <TextField fx:id="typeTxt" layoutX="84.0" layoutY="201.0" />
+      <TextField fx:id="startTimeTxt" layoutX="84.0" layoutY="378.0" prefHeight="26.0" prefWidth="105.0" />
+      <TextField fx:id="endTimeTxt" layoutX="280.0" layoutY="379.0" prefHeight="26.0" prefWidth="105.0" />
+      <Button fx:id="saveBtn" layoutX="269.0" layoutY="419.0" mnemonicParsing="false" onAction="#saveApt" text="Save" />
+      <Button fx:id="cancelBtn" layoutX="344.0" layoutY="419.0" mnemonicParsing="false" onAction="#cancelApt" text="Cancel" />
+      <ComboBox fx:id="contactCB" layoutX="85.0" layoutY="236.0" prefHeight="26.0" prefWidth="160.0" promptText="Select Contact" />
+      <ComboBox fx:id="customerIDCB" layoutX="85.0" layoutY="270.0" prefHeight="26.0" prefWidth="160.0" promptText="Select Customer" />
+      <ComboBox fx:id="userIdCB" layoutX="84.0" layoutY="306.0" prefHeight="26.0" prefWidth="160.0" promptText="Select User" />
+      <DatePicker fx:id="startDateDP" layoutX="77.0" layoutY="341.0" prefHeight="25.0" prefWidth="130.0" />
+      <DatePicker fx:id="endDateDP" layoutX="279.0" layoutY="340.0" prefHeight="25.0" prefWidth="130.0" />
+   </children>
+</AnchorPane>
