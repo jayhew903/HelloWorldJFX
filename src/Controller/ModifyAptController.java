@@ -294,6 +294,10 @@ public class ModifyAptController implements Initializable {
                     return;
                 }
 
+                if(AptSchedulerController.checkAptOverlap(customers.getCustomerId(), 0, start, end) == true){
+                    return;
+                }
+
 
 
                 DBAppointment.update(appointmentId, title, description, location, type, contacts.getContactId(), customers.getCustomerId(), users.getUserId(), startDate, startTime, endDate, endTime);

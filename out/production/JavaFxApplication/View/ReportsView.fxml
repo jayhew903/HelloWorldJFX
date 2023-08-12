@@ -17,7 +17,7 @@
       </Label>
       <ComboBox fx:id="selectMonthCB" layoutX="204.0" layoutY="53.0" onAction="#selectMonthCB" prefHeight="25.0" prefWidth="114.0" promptText="Select Month" />
       <ComboBox fx:id="selectTypeCB" layoutX="339.0" layoutY="53.0" onAction="#selectTypeCB" prefHeight="25.0" prefWidth="114.0" promptText="Select Type" />
-      <Label fx:id="aptCountMTLbl" layoutX="468.0" layoutY="57.0" text="N/A" />
+      <Label fx:id="aptCountMTLbl" layoutX="490.0" layoutY="57.0" text="N/A" />
       <Button fx:id="backToAptBtn" layoutX="31.0" layoutY="447.0" mnemonicParsing="false" onAction="#backToApt" text="Appointments" />
       <Button fx:id="backToCxBtn" layoutX="155.0" layoutY="447.0" mnemonicParsing="false" onAction="#backToCx" text="Customers" />
       <Button fx:id="backToLoginBtn" layoutX="479.0" layoutY="447.0" mnemonicParsing="false" onAction="#backToLogin" text="Log Out" />
@@ -32,7 +32,7 @@
             <TableColumn fx:id="aptCxId" prefWidth="75.0" text="Customer ID" />
         </columns>
       </TableView>
-      <Label layoutX="15.0" layoutY="57.0" text="Num. of Apt by Month &amp; Type" />
+      <Label layoutX="15.0" layoutY="57.0" text="Num. of Apt by Month &amp; Type:" />
       <ComboBox fx:id="contactCB" layoutX="371.0" layoutY="161.0" onAction="#selectContactCB" prefWidth="150.0" promptText="Select Contact" />
       <Label layoutX="15.0" layoutY="163.0" text="Contact Schedule">
          <font>
@@ -43,5 +43,8 @@
       <Label fx:id="countCXLbl" layoutX="127.0" layoutY="111.0" text="Label" />
       <Label layoutX="214.0" layoutY="111.0" text="Total Appointments: " />
       <Label fx:id="countAptLbl" layoutX="357.0" layoutY="111.0" text="Label" />
+      <Label layoutX="242.0" layoutY="23.0" text="Month" />
+      <Label layoutX="371.0" layoutY="23.0" text="Type" />
+      <Label layoutX="476.0" layoutY="23.0" text="Count" />
    </children>
 </AnchorPane>
