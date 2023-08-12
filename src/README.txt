@@ -27,8 +27,11 @@ Selecting an appointment then “delete appointment” will delete the current s
 There is also an option to select “view customers” That will display the customer’s table.
 Customers page will have the same functions as the Appointments Page.
 Another option is “reports” which will display the reports page.
+Reports page will display the total number of appointments based on the selected month and Type.
+It will also count the total number of customers and the total number of appointments in the database.
+It will display the appointments based on the selected contact in a table.
 
-Additional Repot:
+Additional Report:
 The additional report chosen was to count the total number of customers and appointments in the database.
 The number of total customers will increase as customers are added in.
 The number of total appointments will increase as appointments are added.
