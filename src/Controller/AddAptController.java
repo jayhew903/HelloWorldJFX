@@ -25,6 +25,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.ResourceBundle;
 
 public class AddAptController implements Initializable {
@@ -248,6 +249,7 @@ public class AddAptController implements Initializable {
                 alert.showAndWait();
                 return;
             }
+
             if(AptSchedulerController.checkAptOverlap(customers.getCustomerId(), 0, start, end) == true){
                 return;
             }
@@ -255,8 +257,13 @@ public class AddAptController implements Initializable {
             DBAppointment.insert(title, description, location, type, contacts.getContactId(), customers.getCustomerId(), users.getUserId(), startDate, endDate, startTime, endTime);
 
         }
-        catch(SQLException e){
-            e.printStackTrace();
+        catch(SQLException | DateTimeParseException e){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error Dialog");
+            alert.setContentText("Please enter valid fields -" + "Note: times need to be in HH:mm format.");
+            alert.showAndWait();
+            return;
+            //e.printStackTrace();
         }
 
         Parent root = FXMLLoader.load(getClass().getResource("../View/AptSchedulerView.fxml"));

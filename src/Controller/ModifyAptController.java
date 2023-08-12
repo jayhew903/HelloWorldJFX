@@ -23,6 +23,7 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.ResourceBundle;
 
 public class ModifyAptController implements Initializable {
@@ -297,8 +298,12 @@ public class ModifyAptController implements Initializable {
 
                 DBAppointment.update(appointmentId, title, description, location, type, contacts.getContactId(), customers.getCustomerId(), users.getUserId(), startDate, startTime, endDate, endTime);
             }
-            catch(SQLException e){
-                e.printStackTrace();
+            catch(SQLException | DateTimeParseException e){
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Error Dialog");
+                alert.setContentText("Please enter valid fields -" + "Note: times need to be in HH:mm format.");
+                alert.showAndWait();
+                return;
             }
 
         Parent root = FXMLLoader.load(getClass().getResource("../View/AptSchedulerView.fxml"));
